@@ -1,4 +1,5 @@
 echo "This is my first CI/CD practice"
 echo "This is version 2 of the script"
+echo "Wonderfull"
 echo "CI running... ✅"
 echo "Deploying to test folder... 🚀"
