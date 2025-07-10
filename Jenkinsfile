@@ -23,11 +23,12 @@ pipeline {
         }
 
         stage('Deploy') {
-            steps {
-                echo '🚀 Deploying to local production folder...'
-                sh 'cp main.sh ~/jenkins-docker-demo/'
-                sh 'cp test.sh ~/jenkins-docker-demo/'
-                echo '✅ Deployment completed!'
+    steps {
+        echo '🚀 Deploying to local production folder...'
+        sh 'mkdir -p /var/jenkins_home/jenkins-docker-demo'
+        sh 'cp main.sh /var/jenkins_home/jenkins-docker-demo/'
+        sh 'cp Test.sh /var/jenkins_home/jenkins-docker-demo/'
+        echo '✅ Deployment completed!'
             }
         }
     }
